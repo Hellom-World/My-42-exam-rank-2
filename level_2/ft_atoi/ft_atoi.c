@@ -6,15 +6,15 @@
 /*   By: heolivei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 18:36:56 by heolivei          #+#    #+#             */
-/*   Updated: 2023/02/26 19:11:36 by heolivei         ###   ########.fr       */
+/*   Updated: 2023/03/02 10:07:11 by heolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_atoi(const char *str)
 {
-	unsigned long int	number = 0;
-	int 	flag = 1;
+	int	number = 0;
 	int	i = 0;
+	int	flag = 1;
 
 	while (str[i] == ' ' || (str[i] >= '\t' && str[i] <= '\r'))
 		i++;
@@ -22,12 +22,14 @@ int	ft_atoi(const char *str)
 		flag = -1;
 	if (str[i] == '-' || str[i] == '+')
 		i++;
-	while(str[i] >= '0' && str[i] <= '9')
+	while (str[i] >= '0' && str[i] <= '9')
 	{
-		number = (number * 10) + (str[i] - '0');
+		number = number * 10 + str[i] - '0';
 		i++;
 	}
-	return((int)(flag * number));
+
+	return (flag * number);
+
 }
 
 #include <stdio.h>

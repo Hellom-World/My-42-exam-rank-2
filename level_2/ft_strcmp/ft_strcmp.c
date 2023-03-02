@@ -6,14 +6,14 @@
 /*   By: heolivei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 19:20:09 by heolivei          #+#    #+#             */
-/*   Updated: 2023/02/26 19:28:09 by heolivei         ###   ########.fr       */
+/*   Updated: 2023/03/02 10:14:42 by heolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int    ft_strcmp(char *s1, char *s2)
 {
 	int	i = 0;
-	while(s1[i] && s2[i] && s1[i] == s2[i])
+	while (s1[i] && s2[i] && s1[i] == s2[i])
 		i++;
 	return (s1[i] - s2[i]);
 }
