@@ -12,8 +12,8 @@
 
 int	ft_atoi(const char *str)
 {
-	int	number = 0;
 	int	i = 0;
+	int	result = 0;
 	int	flag = 1;
 
 	while (str[i] == ' ' || (str[i] >= '\t' && str[i] <= '\r'))
@@ -24,12 +24,10 @@ int	ft_atoi(const char *str)
 		i++;
 	while (str[i] >= '0' && str[i] <= '9')
 	{
-		number = number * 10 + str[i] - '0';
+		result = result * 10 + str[i] - '0';
 		i++;
 	}
-
-	return (flag * number);
-
+	return (flag * result);
 }
 
 #include <stdio.h>

@@ -14,7 +14,7 @@
 
 size_t	ft_strcspn(const char *s, const char *reject)
 {
-	size_t	i = 0;
+	int	i = 0;
 	int	j = 0;
 
 	while (s[i])
@@ -22,7 +22,7 @@ size_t	ft_strcspn(const char *s, const char *reject)
 		j = 0;
 		while (reject[j])
 		{
-			if (reject[j] == s[i])
+			if (s[i] == reject[j])
 				return (i);
 			j++;
 		}
@@ -33,16 +33,15 @@ size_t	ft_strcspn(const char *s, const char *reject)
 
 #include <stdio.h>
 
-int main(void)
+int	main(void)
 {
-    char *s = "aaalo";
-    char *reject = "hello";
-    size_t result1 = strcspn(s, reject);
-    size_t result2 = ft_strcspn(s, reject);
+	char	*s = "aaalo";
+	char	*reject = "hello";
+	size_t	result1 = strcspn(s, reject);
+	size_t	result2 = ft_strcspn(s, reject);
 
-    printf("Result1 (strspn): %zu\n", result1);
-    printf("Result2 (ft_strspn): %zu\n", result2);
+	printf("resultado da strcspn = %zu\n", result1);
+	printf("resultado da ft_strcspn = %zu\n", result2);
 
-    return 0;
+	return (0);
 }
-

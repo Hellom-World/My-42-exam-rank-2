@@ -15,6 +15,7 @@
 int	str_comp_char(const char *str, char c)
 {
 	int	i = 0;
+
 	while (str[i])
 	{
 		if (str[i] == c)
@@ -27,13 +28,14 @@ int	str_comp_char(const char *str, char c)
 size_t	ft_strspn(const char *s, const char *accept)
 {
 	size_t	i = 0;
-	
+
 	while (s[i])
 	{
 		if (str_comp_char(accept, s[i]) == 0)
 			break;
 		i++;
 	}
+
 	return (i);
 }
 
@@ -41,7 +43,7 @@ size_t	ft_strspn(const char *s, const char *accept)
 
 int main(void)
 {
-    char *s = "hello";
+    char *s = "aaalo";
     char *accept = "hello";
     size_t result1 = strspn(s, accept);
     size_t result2 = ft_strspn(s, accept);
